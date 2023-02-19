@@ -31,10 +31,10 @@ re: fclean all
 run: $(NAME)
 	./$(NAME)
 
-$(WRNG): wrong
-
-wrong: $(WRNGOBJ)
+$(WRNG): $(WRNGOBJ)
 	$(CC) $(CFLAGS) -o $(WRNG) $(WRNGOBJ)
+
+wrong: $(WRNG)
 
 run_wrong:	$(WRNG)
 	./$(WRNG)
