@@ -8,7 +8,7 @@ CC		:= c++
 CFLAGS	:= -std=c++98 -Wall -Wextra -Werror
 RM		:= rm -f
 
-.PHONY: all clean fclean re run
+.PHONY: all clean fclean re run wrong run_wrong
 
 all: $(NAME) $(WRNG)
 
@@ -36,5 +36,5 @@ $(WRNG): wrong
 wrong: $(WRNGOBJ)
 	$(CC) $(CFLAGS) -o $(WRNG) $(WRNGOBJ)
 
-run_wrong:	wrong
+run_wrong:	$(WRNG)
 	./$(WRNG)
