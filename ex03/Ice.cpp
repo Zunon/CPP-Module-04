@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   CureMateria.cpp                                    :+:      :+:    :+:   */
+/*   Ice.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kalmheir <kalmheir@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 16:02:14 by kalmheir          #+#    #+#             */
-/*   Updated: 2023/09/13 16:03:03 by kalmheir         ###   ########.fr       */
+/*   Created: 2023/09/13 15:56:01 by kalmheir          #+#    #+#             */
+/*   Updated: 2023/09/13 15:58:17 by kalmheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "CureMateria.hpp"
+#include "Ice.hpp"
 
-CureMateria::CureMateria(void) : AMateria("cure") {}
+Ice::Ice(void) : AMateria("ice") {}
 
-CureMateria::CureMateria(const CureMateria &other) : AMateria(other) {}
+Ice::Ice(const Ice &other) : AMateria(other) {}
 
-CureMateria::~CureMateria(void) {}
+Ice::~Ice(void) {}
 
-CureMateria &CureMateria::operator=(const CureMateria &other) {
+Ice &Ice::operator=(const Ice &other) {
     AMateria::operator=(other);
     return (*this);
 }
 
-AMateria *CureMateria::clone() const {
-    return (new CureMateria(*this));
+AMateria *Ice::clone() const {
+    return (new Ice(*this));
 }
 
-void CureMateria::use(ICharacter &target) {
-    std::cout   << "* heals " << target.getName()
-                << "'s wounds *" << std::endl;
+void Ice::use(ICharacter &target) {
+    std::cout   << "* shoots an ice bolt at " << target.getName()
+                << " *" << std::endl;
 }

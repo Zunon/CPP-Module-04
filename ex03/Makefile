@@ -6,12 +6,13 @@
 #    By: kalmheir <kalmheir@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/13 15:29:10 by kalmheir          #+#    #+#              #
-#    Updated: 2023/09/13 15:29:11 by kalmheir         ###   ########.fr        #
+#    Updated: 2023/09/13 16:59:35 by kalmheir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:= materia
-SRCS	:= main.cpp
+SRCS	:=	main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp \
+			MateriaSource.cpp
 OBJS	:= $(SRCS:.cpp=.o)
 CC		:= c++
 CFLAGS	:= -std=c++98 -Wall -Wextra -Werror
